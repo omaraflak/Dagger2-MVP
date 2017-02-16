@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dagger2_MVP</string>
+
+    <string name="activity_login_username">Username</string>
+    <string name="activity_login_password">Password</string>
+    <string name="activity_login_connect">Connect</string>
+</resources>
