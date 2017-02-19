@@ -1,11 +1,9 @@
 package me.aflak.dagger2_mvp.ui.Login.presenter;
 
-import android.util.Log;
-
 import me.aflak.dagger2_mvp.data.model.ObjectManager;
 import me.aflak.dagger2_mvp.data.model.User;
-import me.aflak.dagger2_mvp.ui.Login.model.LoginInteractor;
-import me.aflak.dagger2_mvp.ui.Login.model.LoginInteractorImpl;
+import me.aflak.dagger2_mvp.ui.Login.interactor.LoginInteractor;
+import me.aflak.dagger2_mvp.ui.Login.interactor.LoginInteractorImpl;
 import me.aflak.dagger2_mvp.ui.Login.view.LoginView;
 
 /**

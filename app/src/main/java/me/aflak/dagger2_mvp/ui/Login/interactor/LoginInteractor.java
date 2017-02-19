@@ -1,4 +1,4 @@
-package me.aflak.dagger2_mvp.ui.Login.model;
+package me.aflak.dagger2_mvp.ui.Login.interactor;
 
 import me.aflak.dagger2_mvp.data.model.ObjectManager;
 import me.aflak.dagger2_mvp.data.model.User;

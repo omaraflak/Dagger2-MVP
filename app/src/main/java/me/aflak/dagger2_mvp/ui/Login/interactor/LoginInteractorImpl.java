@@ -1,4 +1,4 @@
-package me.aflak.dagger2_mvp.ui.Login.model;
+package me.aflak.dagger2_mvp.ui.Login.interactor;
 
 import android.os.Handler;
 
