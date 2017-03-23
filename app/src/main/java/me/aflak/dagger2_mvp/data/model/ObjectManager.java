@@ -24,11 +24,6 @@ public class ObjectManager {
     }
 
     public <T> Object get(String key, Class<T> type){
-        String str = sharedPreferences.getString(key, null);
-        if(str==null){
-            return null;
-        }
-
-        return gson.fromJson(str, type);
+        return gson.fromJson(sharedPreferences.getString(key, null), type);
     }
 }
