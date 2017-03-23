@@ -23,26 +23,22 @@ public class AppModule {
         this.context = context;
     }
 
-    @Singleton
-    @Provides
+    @Singleton @Provides
     public Context provideContext(){
         return context;
     }
 
-    @Singleton
-    @Provides
+    @Singleton @Provides
     public SharedPreferences provideSharedPreferences(Context context){
         return PreferenceManager.getDefaultSharedPreferences(context);
     }
 
-    @Singleton
-    @Provides
+    @Singleton @Provides
     public Gson provideGson(){
         return new Gson();
     }
 
-    @Singleton
-    @Provides
+    @Singleton @Provides
     public ObjectManager provideObjectManager(SharedPreferences sharedPreferences, Gson gson){
         return new ObjectManager(sharedPreferences, gson);
     }

@@ -36,7 +36,6 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                 .appModule(new AppModule(getApplicationContext()))
                 .loginModule(new LoginModule(this))
                 .build().inject(this);
-
     }
 
     @OnClick(R.id.activity_login_connect)

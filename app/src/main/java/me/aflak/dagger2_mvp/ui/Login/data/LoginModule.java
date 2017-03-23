@@ -22,15 +22,18 @@ public class LoginModule {
         this.view = view;
     }
 
-    @Singleton
-    @Provides
+    @Singleton @Provides
     public LoginView provideLoginView(){
         return view;
     }
 
-    @Singleton
-    @Provides
-    public LoginPresenter provideLoginPresenter(LoginView loginView, ObjectManager objectManager){
-        return new LoginPresenterImpl(loginView, objectManager);
+    @Singleton @Provides
+    public LoginInteractor provideLoginInteractor(ObjectManager objectManager){
+        return new LoginInteractorImpl(objectManager);
+    }
+
+    @Singleton @Provides
+    public LoginPresenter provideLoginPresenter(LoginView loginView, LoginInteractor interactor){
+        return new LoginPresenterImpl(loginView, interactor);
     }
 }

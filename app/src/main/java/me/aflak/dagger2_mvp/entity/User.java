@@ -1,4 +1,4 @@
-package me.aflak.dagger2_mvp.data.model;
+package me.aflak.dagger2_mvp.entity;
 
 /**
  * Created by Omar on 16/02/2017.

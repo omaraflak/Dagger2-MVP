@@ -1,7 +1,6 @@
 package me.aflak.dagger2_mvp.ui.Login.interactor;
 
-import me.aflak.dagger2_mvp.data.model.ObjectManager;
-import me.aflak.dagger2_mvp.data.model.User;
+import me.aflak.dagger2_mvp.entity.User;
 
 /**
  * Created by Omar on 16/02/2017.
@@ -15,5 +14,5 @@ public interface LoginInteractor {
     }
 
     void login(String username, String password, LoginCallback callback);
-    void saveUser(User user, ObjectManager objectManager);
+    void saveUser(User user);
 }

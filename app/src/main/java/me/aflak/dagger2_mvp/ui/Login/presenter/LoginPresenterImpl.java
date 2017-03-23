@@ -1,9 +1,7 @@
 package me.aflak.dagger2_mvp.ui.Login.presenter;
 
-import me.aflak.dagger2_mvp.data.model.ObjectManager;
-import me.aflak.dagger2_mvp.data.model.User;
+import me.aflak.dagger2_mvp.entity.User;
 import me.aflak.dagger2_mvp.ui.Login.interactor.LoginInteractor;
-import me.aflak.dagger2_mvp.ui.Login.interactor.LoginInteractorImpl;
 import me.aflak.dagger2_mvp.ui.Login.view.LoginView;
 
 /**
@@ -13,12 +11,10 @@ import me.aflak.dagger2_mvp.ui.Login.view.LoginView;
 public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.LoginCallback {
     private final LoginView view;
     private LoginInteractor interactor;
-    private ObjectManager objectManager;
 
-    public LoginPresenterImpl(LoginView view, ObjectManager objectManager) {
+    public LoginPresenterImpl(LoginView view, LoginInteractor interactor) {
         this.view = view;
-        this.objectManager = objectManager;
-        this.interactor = new LoginInteractorImpl();
+        this.interactor = interactor;
     }
 
     @Override
@@ -47,7 +43,7 @@ public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.Login
 
     @Override
     public void onSuccess(User user) {
-        interactor.saveUser(user, objectManager);
+        interactor.saveUser(user);
 
         if(view != null){
             view.navigateToHome();
